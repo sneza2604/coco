@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная1</title>
+    <style>
+      #parent> ul> li {
+padding: 5px;
+border: 1px solid gray;
+}
+ #parent>#child> p {
+color: red;
+font-size: 16px;
+line-height: 1.5;
+}
+
+ h1+ul {
+color: blue;
+font-size: 20px;
+}
+p+div {
+color: green;
+font-size: 16px;
+}
+
+a {
+color: blue;
+text-decoration: none;
+}
+a:hover {
+color: red;
+text-decoration: underline;
+}
+button {
+background-color: blue;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+}
+button:hover {
+background-color: red;
+cursor: pointer;
+}
+li:first-child {
+background-color: #ccc;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+input[type="text"], input[type="email"], textarea {
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+padding: 10px 20px;
+background-color: blue;
+color: white;
+border: none;
+border-radius: 5px;
+}
+
+input:invalid, textarea:invalid {
+border-color: red;
+}
+
+h1::before {
+content: "снежок->";
+color:red;
+font-size: 24px;
+}
+h1::after {
+content: "<3";
+color: blue;
+font-size: 24px;
+}
+
+a[target="_blank"] {
+color: blue;
+text-decoration: none;
+}
+a[target="_blank"]:hover {
+color: red;
+text-decoration: underline;
+}
+
+.highlight {
+background-color: yellow;
+}
+.highlight * {
+color: red;
+}
+p {
+font-size: 16px;
+line-height: 1.5;
+color: #666;
+}
+
+.container {
+background-color: green;
+color: red;
+}
+h2{
+color: blue;
+}
+
+    </style>
+</head>
+<body>
+<div id="parent">
+    <h1>Заголовок родительского элемента</h1>
+    <ul>
+        <li>Элемент списка 1</li>
+        <li>Элемент списка 2</li>
+        <li>Элемент списка 3</li>
+        <li>Элемент списка 4</li>
+        <li>Элемент списка 5</li>
+    </ul>
+    <p>Параграф родительского элемента</p>
+    <div id="child">
+        <h2>Заголовок дочернего элемента</h2>
+        <p>Параграф дочернего элемента</p>
+    </div>
+</div>
+<a href="#">Это ссылка</a>
+<button>Это кнопка</button>
+<form>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <input type="submit" value="Отправить">
+</form>
+<h1>текст текст текст текст текст снежок</h1>
+<a href="https://vk.com" target="_blank">Это ссылка, открывающаяся в новой вкладке</a>
+<h1>Заголовок страницы</h1>
+<div class="container">
+    <div class="highlight">
+        <p>Это текст с классом .</p>
+        <p>Это также текст с классом .</p>
+        <p>Это текст внутри, который должен быть красным</p>
+    </div>
+</div>
+<div class="container">
+   <h2>текст текст текст текст</h2>
+</div>
+</body>
+</html>
